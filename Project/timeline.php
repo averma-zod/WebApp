@@ -23,10 +23,10 @@
 		<tr>
 			<td></td>
 			<th align="left" width="8%">
-				<button class="set" style="border:1px solid grey;">Your photos</font></button>
+				<button class="set" >Your photos</font></button>
 			</th>
 			<th align="left" width="8%">
-				<button class="set" style="border:1px solid grey;">Photos liked</font>
+				<button class="set" >Photos liked</font>
 			</th>
 			<th width="84%" align="right">
 				<select name="Setting" style="padding: 10px;color:white; background-color: black">
