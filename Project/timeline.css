@@ -1,0 +1,42 @@
+.panel {
+	padding: 20px grey;
+	width: 100%;
+	background-color: black;
+	border: 1px solid grey;
+	border-collapse: collapse;
+}
+.set{
+	background-color: black;
+	width: 100%;
+	display: inline-block;
+	border:4px white;
+	color:white;
+	padding: 11px;
+	text-align: center;
+}
+
+	.set:hover {
+	background-color: white;
+	transition: 0.3s;
+	color: black;
+}
+.img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.profile{
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			border-radius: 100%;
+}
+.midline{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	width: 200px;
+	height: 220px;
+}
