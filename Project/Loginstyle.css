@@ -1,0 +1,59 @@
+.header{
+	border: 1px solid black;
+    width: 600px;
+    height: 320px;
+    margin: 120px 370px;
+    background-color: #00000A;
+    opacity: 0.7;  
+    border-radius: 5px;
+}
+
+.inp{
+	padding: 14px;
+	border: 1px solid black;
+	width: 270px;
+	margin: 4px 0px;
+
+}
+
+.text{
+	width: 200px;
+	padding: 14px;
+	color: white;
+}
+
+.heading{
+    padding: 20px;
+    color: white;
+}
+
+.link{
+	text-decoration-style: bold;
+}
+
+.footer{
+	background-color: #00000A;
+    opacity: 0.9; 
+    height: 56px;
+	border-top: 1px solid black;
+	border-radius: 5px 5px 0px 0px;
+}
+
+.btn{
+	border: 1px solid black;
+	margin: 15px 0px;
+	padding: 10px;
+	width: 100px;
+	background: powderblue;
+	color: black;
+	border-radius: 5px;
+}
+
+.link{
+	color: white;
+	text-decoration: none;
+}
+body{
+	background-image: url('Registerback.jpg');
+	background-size: cover;
+}
