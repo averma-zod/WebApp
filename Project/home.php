@@ -6,7 +6,7 @@
 </head>
 <body>
 	<div class="heading">
-        <h1 align="center">S.A Taxi Service</h1>
+        <h1 align="center"><font color="white">Project</font></h1>
     </div>
 
     <div class="header">
