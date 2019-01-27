@@ -1,6 +1,6 @@
 <?php
 
-   $db = mysqli_connect("localhost","root","","Details") or die("Error");
+   $db = mysqli_connect("localhost","root","","details") or die("Error");
 
    if(isset($_POST['Submit']))
    {

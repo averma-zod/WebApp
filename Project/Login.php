@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+  session_start();
+  ?>
+  <!DOCTYPE html>
 <html>
 <head>
 	<title>LOGIN</title>
@@ -31,7 +34,9 @@
    	
    </div>
    <div class="footer">
-   	  <h4 align="center"><a class="link" href="www.google.com">Contact Us</a></h4>
+    <h3 align="center"><a class="link" href="register.php"><font color="blue">Register</font></a>
+   	    <a class="link" href="www.google.com"><font color="red"> Contact Us</font></a>
+      </h3>
    </div>
    </form>
 </body>

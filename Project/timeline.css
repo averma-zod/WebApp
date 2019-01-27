@@ -1,6 +1,5 @@
 .panel {
 	padding: 20px grey;
-	width: 100%;
 	background-color: black;
 	border: 1px solid grey;
 	border-collapse: collapse;
@@ -8,7 +7,7 @@
 .set{
 	border-style: all;
 	background-color: black;
-	width: 100%;
+	width: 50%;
 	color:white;
 	padding: 11px;
 	text-align: center;

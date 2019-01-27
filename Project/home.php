@@ -1,8 +1,12 @@
-<!DOCTYPE html>
+<?php
+  session_start();
+  ?>
+  <!DOCTYPE html>
 <html>
 <head>
 	<title>Home</title>
 	<link rel="stylesheet" type="text/css" href="homestyle.css">
+   
 </head>
 <body>
 	<div class="heading">
@@ -22,20 +26,38 @@
 
     		<th><input class="search" type="text" name="search" placeholder="Photographer"></th>
     		<th><button class="headerbtn">Search</button></th>
-    		<th><select class="headerdrpbtn" name="Setting">
-    			   <option value="Profile">My Profile</option>
+            <th><form method="post" action="timeline.php">
+                <button  class="headerbtn" >My Profile</button></form>
+            </th>
+    		<th>
+                <select class="headerdrpbtn" name="Setting" onchange="is(this.value)">
+    			   <option disabled selected  value="">Setting</option>
     			   <option value="ActSet">Account Settings</option>
-    			   <option value="LogOut">Log Out</option>
+    			   <option value="Login.php">Log Out</option>
     		</select></th>
     	</table>
     </div>
     <div class="imagebody" align="center">
        <div class="images" align="center">
     	   <img class="image" style="width: 300px; height: 300px;" src="abc.jfif">
-    	   <p>Name:</p>
-    	   <p>Photographer:</p>
+    	   <p>Name:
+            <?php
+             echo $_SESSION['name'];
+           ?>
+           </p>
+    	   <p>Photographer:
+            <?php
+             echo $_SESSION['name'];
+           ?>
+           </p>
     	   <p>Category:</p>
        </div>
     </div>
 </body>
 </html>
+<script>
+    function is(src)
+    {
+        window.location=src;
+    }
+</script>

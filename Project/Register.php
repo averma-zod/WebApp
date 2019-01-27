@@ -39,7 +39,9 @@
    	
    </div>
    <div class="footer">
-   	  <h4 align="center"><a class="link" href="www.google.com">Contact Us</a></h4>
+    <h3 align="center"><a class="link" href="Login.php"><font color="blue">Login</font></a>
+        <a class="link" href="www.google.com"><font color="red"> Contact Us</font></a>
+      </h3>
    </div>
   </form>
 </body>

@@ -1,5 +1,5 @@
 <?php
- 
+  session_start();
   $db = mysqli_connect("localhost","root","","Details");
   if(isset($_POST['Submit']))
   {
@@ -9,15 +9,15 @@
     $sql = "SELECT * FROM Data WHERE Name='$Name'";    
     $result = mysqli_query($db,$sql);
     $number=$result->num_rows;
-    
     if($number == 1)
     {
         $row = $result->fetch_assoc();
         $pass = $row["Password"];
-        $Password = md5($Password);
+        $Password =md5($Password);
 
         if($pass == $Password)
         {
+          $_SESSION['name']=$Name;
         	header('Location:home.php');
         }
         else
