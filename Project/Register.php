@@ -32,16 +32,19 @@
             <tr>
               <th colspan="2"><input class="btn"  type="submit" name="Submit" value="Register"></th>
             </tr>
+            <tr>
+              <th></th><th align="right"><font color="white">Already a Member  </font><a class="link" href="Login.php"><font color="red">Login</font></a></th>
+            </tr>
    		</thead>
    	</table>
    </div>
-   <div style="height: 30px;">
+   <div style="height: 20px;">
    	
    </div>
    <div class="footer">
-    <h3 align="center"><a class="link" href="Login.php"><font color="blue">Login</font></a>
+    <h3 align="center">
         <a class="link" href="www.google.com"><font color="red"> Contact Us</font></a>
-      </h3>
+    </h3>
    </div>
   </form>
 </body>

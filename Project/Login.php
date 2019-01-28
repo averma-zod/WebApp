@@ -27,14 +27,17 @@
             <tr>
               <th colspan="2"><input class="btn"  type="submit" name="Submit" value="Login"></th>
             </tr>
+            <tr>
+            	<th></th><th align="right"><font color="white">Create New Account  </font><a class="link" href="register.php"><font color="red">Register</font></a></th>
+            </tr>
    		</thead>
    	</table>
    </div>
-   <div style="height: 30px;">
+   <div style="height: 40px;">
    	
    </div>
    <div class="footer">
-    <h3 align="center"><a class="link" href="register.php"><font color="blue">Register</font></a>
+    <h3 align="center">
    	    <a class="link" href="www.google.com"><font color="red"> Contact Us</font></a>
       </h3>
    </div>
