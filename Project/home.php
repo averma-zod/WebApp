@@ -38,8 +38,8 @@
     	</table>
     </div>
     <div class="imagebody" align="center">
-       <div class="images" align="center">
-    	   <img class="image" style="width: 300px; height: 300px;" src="abc.jfif">
+       <div class="images1" align="center">
+    	   <img class="image1" style="width: 300px; height: 300px;" src="abc.jfif">
     	   <p>Name:
             <?php
              echo $_SESSION['name'];

@@ -43,7 +43,7 @@ body{
 	background-color: black;
 }
 
-.images{
+.images1{
 	margin-top: 20px;
 	margin-bottom: 25px;
     background-color: #52A7AD;
@@ -62,10 +62,10 @@ body{
 	border-radius:20px;
 }
 
-.image{
+.image1{
     opacity: 0.9;
 }
 
-.image:hover{
+.image1:hover{
 	opacity: 1;
 }

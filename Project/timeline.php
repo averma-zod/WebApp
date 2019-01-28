@@ -38,7 +38,9 @@
 				<button class="set" style="width: 120px;">Photos liked</font>
 			</th>
 			<th width="125px;">
-				<button class="set" style="width: 120px;">Upload</font>
+				<form method="post" action="upload.php">
+				<button class="set" style="width: 120px;">Upload</font></button>
+			</form>
 			</th>
 			<th width="720px;">
 			</th>

@@ -1,0 +1,49 @@
+.table{
+	padding: 20px grey;
+	background-color: black;
+	border: 10px solid grey;
+	border-collapse: collapse;
+	width: 30%;	
+	height: 10%;
+}
+.button{
+	margin-top: 30px;
+	display: inline-block;
+	background-color:black;
+	width: 78%;
+	margin-bottom: 40px;
+	color:white;
+	border-radius: 4px;
+}
+.button:hover{
+	background-color: white;
+	transition: 0.4s;
+	color:black;
+}
+.sub{
+	margin-top: 30px;
+	display: inline-block;
+	background-color:white;
+	margin-bottom: 40px;
+	color:black;
+	border-radius: 4px;
+}
+.sub:hover{
+	background-color: black;
+	transition: 0.4s;
+	color:white;
+}
+.sub2{
+	margin-top: 30px;
+	display: inline-block;
+	background-color:white;
+	margin-bottom: 40px;
+	color:black;
+	height: 35px;
+	border-radius: 4px;
+}
+.sub2:hover{
+	background-color: black;
+	transition: 0.4s;
+	color:white;
+}
