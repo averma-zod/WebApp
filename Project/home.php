@@ -27,7 +27,7 @@
     		<th><input class="search" type="text" name="search" placeholder="Photographer"></th>
     		<th><button class="headerbtn">Search</button></th>
             <th><form method="post" action="timeline.php">
-                <button  class="headerbtn" >My Profile</button></form>
+                <button style="width: 120px;" class="headerbtn" >My Profile</button></form>
             </th>
     		<th>
                 <select class="headerdrpbtn" name="Setting" onchange="is(this.value)">

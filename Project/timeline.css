@@ -3,18 +3,18 @@
 	background-color: black;
 	border: 1px solid grey;
 	border-collapse: collapse;
+	width: 100%;
 }
+
 .set{
 	border-style: all;
 	background-color: black;
-	width: 50%;
 	color:white;
-	padding: 11px;
+	padding: 10px;
 	text-align: center;
-
 }
 
-	.set:hover {
+.set:hover {
 	background-color: white;
 	transition: 0.3s;
 	color: black;

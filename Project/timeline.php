@@ -19,32 +19,34 @@
 	<link rel="stylesheet" type="text/css" href="timeline.css"></link>
 </head>
 <body>
-		<img class="profile" src="abc.JFIF" alt="User">
 	
-	<h2 align="center" ><font color="white">
+	<img class="profile" src="abc.JFIF" alt="User">
+	
+	<h2 align="center" >
+		<font color="white">
 		<?php
-		echo $_SESSION['name'];
+		   echo $_SESSION['name'];
 		?>	
-		</font></h2>
+		</font>
+	</h2>
 	<table  class="panel">
 		<tr>
-			<td></td>
-			<th width="8%">
-				<button class="set" >Your photos</font></button>
+			<th width="125px;">
+				<button class="set" style="width: 120px;">Your photos</font></button>
 			</th>
-			<th width="8%">
-				<button class="set" >Photos liked</font>
+			<th width="125px;">
+				<button class="set" style="width: 120px;">Photos liked</font>
 			</th>
-			<th width="24%">
-				<form id="form" method="post" action="upload.php" enctype="multipart/form-data" target="iframe">
-				<input class="new" type="file" id="file" name="Add a file">
-				<input type="submit" id="submit" name="submit" value="Upload">
-			</form>
+			<th width="125px;">
+				<button class="set" style="width: 120px;">Upload</font>
 			</th>
-			<th  width="8%"><form method="post" action="home.php">
-                <button class="set">HOME</button></form>
+			<th width="720px;">
+			</th>
+			<th width="125px;">
+				<form method="post" action="home.php">
+                <button class="set" style="width: 150px;">HOME</button></form>
             </th>
-			<th width="52%" align="right">
+			<th width="125px;" align="right">
 				<select name="Setting" style="padding: 10px;color:white; background-color: black"  onchange="is(this.value)">
 				<option disabled selected value="">Settings</option>
 				<option value="acc">account setting</option>
