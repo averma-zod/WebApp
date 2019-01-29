@@ -1,27 +1,32 @@
 <?php
   session_start();
-  ?>
-  <!DOCTYPE html>
+  $name = $_SESSION['name'];
+
+  
+  $db = mysqli_connect("localhost","root","","Details");
+  $query = "SELECT * FROM profile WHERE Name = '$name'";   //query
+  $sql = mysqli_query($db, $query);
+   
+  while($row = mysqli_fetch_array($sql))
+  {
+    $sname = $row['ServerName'];
+  }
+
+  $name = 'Profile/'.$sname;
+
+
+  
+ ?>
+ 
+ <!DOCTYPE html>
 <html>
 <head >
 	<title>Timeline</title>
-	<style>
-		h2 {
-			background-color: black;
-			margin-bottom: 0px;
-			border: 2px solid grey;
-			border-collapse: collapse;
-		}
-		body{
-			background-color: black;
-		}
-	</style>
 	<link rel="stylesheet" type="text/css" href="timeline.css"></link>
 </head>
 <body>
-	
-	<img class="profile" src="abc.JFIF" alt="User">
-	
+	<table>
+	<img class="profile" src="<?=$name ?>" alt="User">
 	<h2 align="center" >
 		<font color="white">
 		<?php
@@ -29,20 +34,15 @@
 		?>	
 		</font>
 	</h2>
+	</table>
 	<table  class="panel">
 		<tr>
 			<th width="125px;">
-				<button class="set" style="width: 120px;">Your photos</font></button>
-			</th>
-			<th width="125px;">
-				<button class="set" style="width: 120px;">Photos liked</font>
-			</th>
-			<th width="125px;">
 				<form method="post" action="upload.php">
-				<button class="set" style="width: 120px;">Upload</font></button>
-			</form>
+				<button class="set" name="" style="width: 120px;">Upload</button>
+			    </form>
 			</th>
-			<th width="720px;">
+			<th width="890px;">
 			</th>
 			<th width="125px;">
 				<form method="post" action="home.php">
@@ -51,15 +51,41 @@
 			<th width="125px;" align="right">
 				<select name="Setting" style="padding: 10px;color:white; background-color: black"  onchange="is(this.value)">
 				<option disabled selected value="">Settings</option>
-				<option value="acc">account setting</option>
-				<option value="Login.php">log out</option>
+				<option value="AccSet.php">Account Setting</option>
+				<option value="Login.php">Logout</option>
 			</select>
 			</th>
 		</tr>
 	</table>
-	<iframe style="display: all;" class="midline" name="iframe">
-	</iframe>
+	<form method="POST" action="timelineserver.php">
+	<div align="center" class="pad">
+		<?php $db = mysqli_connect("localhost","root","","Details");
+              $name=$_SESSION['name'];
+              $query = "SELECT * FROM timeline where Name='$name'";   //query
+              $sql = mysqli_query($db, $query);  
+              $number = mysqli_num_rows($sql);
 
+	          while($row = mysqli_fetch_array($sql))
+              {
+                  $fname = $row['FileName'];
+                  $pname = $row['Name'];
+                  $category = $row['Category'];
+                  ?>
+                  	  <div align="center" class="imageback">
+                  <?php
+      
+                  $name = $row['ServerName'];
+                  $name = 'Uploads/'.$name;
+                  ?>
+                      <button name="bttn" value="<?=$fname ?>" />
+                  	  <img class="img" style="width: 710px; height: 400px; margin: 10px 0px;" src="<?=$name ?>" />
+                  	  </button>
+                  	  </div>
+                  <?php 
+              }
+        ?>
+	</div>
+    </form>
 </body>
 </html>
 

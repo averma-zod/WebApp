@@ -1,7 +1,7 @@
 <?php
 
    $db = mysqli_connect("localhost","root","","details") or die("Error");
-
+   $errors = array();
    if(isset($_POST['Submit']))
    {
     if(empty($_POST['name']))
@@ -26,16 +26,19 @@
            $Password = md5($Password);
            $sql="INSERT INTO Data(Name,Email,Password) VALUES ('$Name','$Email','$Password')";
            mysqli_query($db, $sql);
+
+           $sql="INSERT INTO Profile(Name,ServerName) VALUES ('$Name','New.png')";
+           mysqli_query($db, $sql);
            header('Location:Login.php');
         }
         else
         {
-           echo "Password Do Not Match";
+           array_push($errors,'Password Do Not Match');
         }
      }
      else
      {
-       echo "User Already Exist";
+        array_push($errors,'User Already Exist');
      }
     }
    }

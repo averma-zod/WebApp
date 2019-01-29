@@ -1,50 +1,58 @@
+<?php
+      include('ViewPhotoServer.php');
+      session_start();
+      $name=$_SESSION['naame'];
+
+      $db = mysqli_connect("localhost","root","","Details");
+      $query = "SELECT * FROM timeline WHERE ServerName = '$name'";   //query
+      $sql = mysqli_query($db, $query);
+   
+      while($row = mysqli_fetch_array($sql))
+      {
+         $fname = $row['FileName'];
+         $pname = $row['Name'];
+         $cate = $row['Category'];
+        $desc = $row['Description'];
+      }
+
+      $name = 'Uploads/'.$name;
+?>
 <html>
 <head>
- <title>
- 	View Photo
- </title>
- <h2 align="center">
- 	<font color="white">
- 		Picture Description
- 	</font>
- </h2>
+ <title> View Photo </title>
  <link rel="stylesheet" href="ViewPhotoStyle.css">
 </head>
 <body>
-
-	    <center><img style="opacity:" src="l.jpg" width="750px" height="400px" border="10">
-			<form align="bottom" style="margin: 20px 0px;" >
-			<table style="opacity: 1;">
+	<form method="POST" action="ViewPhoto.php">
+	 <div class="header">
+	 	<table>
+		  <thead>
+		    <th><button class="btn" name="back">Home</button></th>
+		    <th width="74%;"></th>
+		    <th><button class="btn" style="width: 140px" name="Profile">My Profile</button></th>
+		    <th><button class="btn" name="Logout">Logout</button></th>
+	      </thead>
+	    </table>
+	 </div>
+	</form>
+	<div class="tab" align="center">
+	        <img border="10" style="width: 710px; height: 400px; margin: 10px 0px;" src="<?=$name ?>" />
+			<table>
+				<thead>
 				<tr>
-					<td>
-						<font style="color: #8A2BE2;" size="5" face="ZapfDingbats">
-							Picture Name : GEU
-						</font>
-					</td>
+					<th align="left" class="text">Picture Name</th><th align="center" class="text"><?php echo $fname?></th>
 				</tr>
 				<tr>
-					<td>
-						<font style="color: #8A2BE2;" size="5" face="ZapfDingbats">
-							Photographer : Akash Verma
-						</font>
-					</td>
+					<th align="left" class="text">Photographer</th><th align="center" class="text"><?php echo $pname?></th>
 				</tr>
 				<tr>
-					<td>
-						<font style="color: #8A2BE2;" size="5" face="ZapfDingbats">
-							Category : Day
-						</font>
-					</td>				
+					<th align="left" class="text">Category</th><th align="center" class="text"><?php echo $cate?></th>
 				</tr>
 				<tr>
-					<td>
-						<font style="color: #8A2BE2;" size="5" face="ZapfDingbats">
-							Description : Mirror Image
-						</font>
-					</td>
+					<th align="left" class="text">Description</th><th align="center" class="text"><?php echo $desc?></th>
 				</tr>
+				</thead>
 			</table>
-		  </form>
-		
+    </div>
 </body>
 </html>

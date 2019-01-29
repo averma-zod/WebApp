@@ -1,6 +1,4 @@
-<?php
-  session_start();
-  ?>
+<?php include('LoginServer.php'); ?>
   <!DOCTYPE html>
 <html>
 <head>
@@ -8,13 +6,16 @@
 	<link rel="stylesheet" type="text/css" href="Loginstyle.css">
 </head>
 <body>
-  <form method="POST" action="LoginServer.php">
+  <form method="POST" action="Login.php">
    <div align="center" class="header">
    	<table>
    		<thead>
    			<tr>
    			  <th class="heading" colspan="2"><h1>Login</h1></th>
-            </tr>
+        </tr>
+        <tr>
+           <th colspan="2"><?php include('errors.php'); ?></th>
+        </tr>
    			<tr>
    			  <th class="text" align="left">Username</th>
               <th><input class="inp" type="text" name="name" placeholder="Enter Username"></th>
@@ -33,7 +34,7 @@
    		</thead>
    	</table>
    </div>
-   <div style="height: 40px;">
+   <div style="height: 50px;">
    	
    </div>
    <div class="footer">

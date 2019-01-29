@@ -1,19 +1,21 @@
 .table{
 	padding: 20px grey;
-	background-color: black;
+	background-color: rgba(0,0,0,0.8);
 	border: 10px solid grey;
 	border-collapse: collapse;
 	width: 30%;	
 	height: 10%;
+	margin: 40px 450px;
 }
 .button{
 	margin-top: 30px;
 	display: inline-block;
-	background-color:black;
+	background-color: rgba(0,0,0,0);
 	width: 78%;
 	margin-bottom: 40px;
 	color:white;
 	border-radius: 4px;
+	border: 1px solid blue;
 }
 .button:hover{
 	background-color: white;
@@ -22,8 +24,7 @@
 }
 .sub{
 	margin-top: 30px;
-	display: inline-block;
-	background-color:white;
+	background-color:;
 	margin-bottom: 40px;
 	color:black;
 	border-radius: 4px;
@@ -35,15 +36,28 @@
 }
 .sub2{
 	margin-top: 30px;
-	display: inline-block;
-	background-color:white;
+	background-color: black;
 	margin-bottom: 40px;
-	color:black;
+	color:white;
 	height: 35px;
+	border: 1px solid blue;
 	border-radius: 4px;
+	width: 80px;
 }
 .sub2:hover{
-	background-color: black;
+	background-color: white;
 	transition: 0.4s;
-	color:white;
+	color:black;
+}
+
+.text
+{
+  padding: 5px;
+  border: 1px solid black;
+  border-right: 3px;
+}
+
+.drpbtn{
+    width: 180px;
+    margin: 5px 0px; 
 }

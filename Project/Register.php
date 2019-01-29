@@ -1,3 +1,4 @@
+<?php include('RegisterServer.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,15 +6,18 @@
 	<link rel="stylesheet" type="text/css" href="Registerstyle.css">
 </head>
 <body>
-  <form method="POST" action="RegisterServer.php">
+  <form method="POST" action="Register.php">
    <div align="center" class="header">
    	<table>
    		<thead>
    			<tr>
    			  <th class="heading" colspan="2"><h1>Register</h1></th>
             </tr>
-   			<tr>
-   			  <th class="text" align="left">Username</th>
+   	     <tr>
+           <th colspan="2"><?php include('errors.php'); ?></th>
+         </tr>
+       		<tr>
+       			  <th class="text" align="left">Username</th>
               <th><input class="inp" type="text" name="name" placeholder="Enter Username"></th>
             </tr>
             <tr>
@@ -38,7 +42,7 @@
    		</thead>
    	</table>
    </div>
-   <div style="height: 20px;">
+   <div style="height: 10px;">
    	
    </div>
    <div class="footer">

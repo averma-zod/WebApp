@@ -1,5 +1,6 @@
 <?php
   session_start();
+  $errors = array();
   $db = mysqli_connect("localhost","root","","Details");
   if(isset($_POST['Submit']))
   {
@@ -22,12 +23,12 @@
         }
         else
         {
-          echo "Incorrect Password";
+          array_push($errors,'Incorrect Password');
         }
     }
     else
     {
-    	echo "User Does Not Exist";
+      array_push($errors,'User Do Not Exist');
     }
   }
 ?>

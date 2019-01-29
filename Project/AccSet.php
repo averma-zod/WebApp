@@ -1,93 +1,68 @@
+<?php 
+  include('LoginServer.php');
+  include('AccSetServer.php');
+  $nam=$_SESSION['name']; 
+
+  $db = mysqli_connect("localhost","root","","Details");
+  $query = "SELECT * FROM profile WHERE Name = '$nam'";   //query
+  $sql = mysqli_query($db, $query);
+   
+  while($row = mysqli_fetch_array($sql))
+  {
+    $sname = $row['ServerName'];
+  }
+
+  $name = 'Profile/'.$sname;
+?>
 <html>
 <head>
-	<title>Account Setting</title>
+	<title>Account Settings</title>
 	<link rel="stylesheet" type="text/css" href="AccSetStyle.css">
-	<style type="text/css">
-	h2{
-		color:white;
-		text-align:center;
-		padding-right:80px;
-
-	}
-	table,th,tr{
-		
-		color:white;
-	}
-	body{
-		background-image: url('login.jpg');
-		background-size: cover;
-
-	}
-				.aa{
-			width:600px;
-			height: 400px;
-			background-color: rgba(0,0,0,0.7);
-			margin:0 auto;
-			margin-top:100px;
-			padding-top:100px;
-			padding-left:100px;
-			border-radius:100px;
-			color:white;
-			font-weight:bolder;
-			box-shadow:inset -4px -4px rgba(0,0,0,0.8)
-		}
-		.aa input[type="text"]{
-			width:200px;
-			height:30px;
-			border:0;
-			border-radius:5px;
-		}
-		.aa input[type="password"]{
-			width:200px;
-			height:30px;
-			border:0;
-			border-radius:5px;
-		}
-			.aa input[type="submit"]{
-			width: 80px;
-			height: 25px;
-			border:0;
-			border-radius: 5px;
-			background-color: solid grey;
-		}
-    </style>
 </head>
-	
-	<body>
-
-	<div align="center" class="aa">
-	
-	<form>
+<body> 
+  <form method="POST" action="AccSet.php">
+  
+  <div class="header">
+  	<table>
+      <thead>
+  	    <th><button class="hdbtn" name="homebtn">Home</button></th> <th style="color: white; font-size: 20px; font-family:arial;padding: 10px;" width="92%">Account Settings</th><th><button name="profilebtn" class="hdbtn">Profile</button></th>
+      </thead>
+    </table>
+  </div>
+  
+  <div align="center" class="table">	
 		<table>
 		  <thead>
 		  	<tr>
-		  		<th><input class="btn" type="submit" value="Home"></th>
-		  		<th align="center"><h2>Account Settings</h2></th>
-		  	    <th><input class="btn" type="submit" value="Log Out"></th>
+		  		<th colspan="3"><img class="profile" src="<?=$name ?>" alt="User"></th>
 		  	</tr>
 		  	<tr>
-		  	   <th align="right">Name</th>
-		       <th><input class="text" type="text" placeholder="Enter New Name"></th>
-		       <th align="left"><input class="btn" type="submit" value="Update"></th>
-		    </tr>
-		    <tr>
-		       <th align="right">New Email</th>
-		       <th><input class="text" type="text" placeholder="Enter New Email"></th>
-		       <th align="left"><input class="btn" type="submit" value="Update"></th>
-            </tr>
-		    <tr>
-			   <th align="right">Password</th>
-	           <th><input class="text" type="password" placeholder="Enter Old Password"></th><th></th>
-		    <tr>
-			   <th></th><th><input class="text" type="password" placeholder="Enter New Password"></th><th></th>
-		    </tr>
-			   <th></th><th><input class="text" type="password" placeholder="Confirm New Password"></th>
-		       <th align="left"><input class="btn" type="submit" value="Update"></th>
-			</tr>
-			
-          </thead>
+		  		<th colspan="3"><a href="www.google.com">Change Image</a></th>
+		  	</tr>
+		  	<tr>
+		  		<th colspan="3"><font color="white"><?php echo $nam; ?></font></th>
+		  	</tr>
+		  	<tr height="20px;">
+		        
+		  	</tr>
+		  	<tr>
+		  		<th align="left"><font color="white">Name</font></th><th><input class="textbox" type="text" name="newname" placeholder="Enter New Name"></th><th><button class="btn" name="NUpdate">Update</button></th>
+		  	</tr>
+		  	<tr>
+		  		<th align="left"><font color="white">Email</font></th><th><input class="textbox" type="text" name="newemail" placeholder="Enter New Email"></th><th><button class="btn" name="EUpdate">Update</button></th>
+		  	</tr>
+		  	<tr>
+		  		<th align="left"><font color="white">Password</font></th><th><input class="textbox" type="text" name="oldpass" placeholder="Enter Old Password"></th><th></th>
+		  	</tr>
+		  	<tr>
+		  		<th></th><th><input class="textbox" type="text" name="newpass" placeholder="Enter New Password"></th><th></th>
+		  	</tr>
+            <tr>
+		  		<th></th><th><input class="textbox" type="text" name="newcpass" placeholder="Enter New Password Again"></th><th><button class="btn" name="PUpdate">Update</button></th>
+		  	</tr>
+		  </thead>
         </table>
-     </form>
-   </div>
+    </div>
+   </form>
 </body>
 </html>
