@@ -18,6 +18,17 @@ body
   color: white;
 }
 
+.texxt
+{
+  text-decoration: none; 
+  color: white;
+}
+
+.texxt:hover
+{
+  color: red;
+}
+
 .header
 { 
   margin: 0px;

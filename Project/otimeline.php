@@ -2,9 +2,11 @@
   session_start();
   $name = $_SESSION['name'];
 
-  
+  $pname = $_SESSION['name'];
+  $oname = $_SESSION['oname'];
+
   $db = mysqli_connect("localhost","root","","Details");
-  $query = "SELECT * FROM profile WHERE Name = '$name'";   //query
+  $query = "SELECT * FROM profile WHERE Name = '$oname'";   //query
   $sql = mysqli_query($db, $query);
    
   while($row = mysqli_fetch_array($sql))
@@ -14,8 +16,12 @@
 
   $name = 'Profile/'.$sname;
 
-  $pname = $_SESSION['name'];
   
+
+  if($pname == $oname)
+  {
+    header('Location:timeline.php');
+  }
  ?>
  
  <!DOCTYPE html>
@@ -30,7 +36,7 @@
 	<h2 align="center" >
 		<font color="white">
 		<?php
-         echo $pname;
+         echo $oname;
 		?>	
 		</font>
 	</h2>
@@ -38,9 +44,9 @@
 	<table  class="panel">
 		<tr>
 			<th width="125px;">
-				<form method="post" action="upload.php">
-				<button class="set" name="" style="width: 120px;">Upload</button>
-			    </form>
+				<form method="post" action="timeline.php">
+				  <button class="set" name="" style="width: 120px;">My Profile</button>
+			  </form>
 			</th>
 			<th width="890px;">
 			</th>
@@ -61,7 +67,7 @@
 	<div align="center" class="pad">
 		<?php $db = mysqli_connect("localhost","root","","Details");
               $name=$_SESSION['name'];
-              $query = "SELECT * FROM timeline where Name='$name'";   //query
+              $query = "SELECT * FROM timeline where Name='$oname'";   //query
               $sql = mysqli_query($db, $query);  
               $number = mysqli_num_rows($sql);
 

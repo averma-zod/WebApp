@@ -49,26 +49,35 @@
                 $number = mysqli_num_rows($sql);
                 if($number>10)
                 {
-                  for($i=0;$i<10;$i++)
+                  $d = 0;
+                  $j = 1;
+                  $i = $number;
+                  $k = $i -10;
+                  while($row = mysqli_fetch_array($sql))
                   {
-                    $fname = $row['FileName'];
-                    $pname = $row['Name'];
-                    $category = $row['Category'];
-                    ?>
-                    <div align="center" class="imageback">
-                    <?php
-                     echo $fname;
-                     $name = $row['ServerName'];
-                     $name = 'Uploads/'.$name;
-                     ?>
-                     <button name="bttn" value="<?=$fname ?>" />
-                       <img class="img" style="width: 710px; height: 400px; margin: 10px 0px;" src="<?=$name ?>" />
-                     </button>
-                     <font>Photographer:</font><?php echo $pname?><br>
-                     <font>Category:</font><?php echo $category?><br>
-                    </div>
-                    <?php	
-                  }
+                    $j = $j+1;
+                    if($j > $k)
+                    {
+                       $d = $d+1;
+                       $fname = $row['FileName'];
+                       $pname = $row['Name'];
+                       $category = $row['Category'];
+                       ?>
+                       <div align="center" class="imageback">
+                       <?php
+                         echo $fname;
+                         $name = $row['ServerName'];
+                         $name = 'Uploads/'.$name;
+                       ?>
+                       <button name="bttn" value="<?=$fname ?>" />
+                          <img class="img" style="width: 710px; height: 400px; margin: 10px 0px;" src="<?=$name ?>" />
+                       </button>
+                       <font>Photographer:</font><?php echo $pname?><br>
+                       <font>Category:</font><?php echo $category?><br>
+                       </div>
+                    <?php    	
+                   }
+                 }
                 }
                 else
                 {

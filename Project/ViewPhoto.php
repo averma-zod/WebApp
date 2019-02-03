@@ -12,9 +12,10 @@
          $fname = $row['FileName'];
          $pname = $row['Name'];
          $cate = $row['Category'];
-        $desc = $row['Description'];
+         $desc = $row['Description'];
       }
-
+      
+      $_SESSION['oname'] = $pname;
       $name = 'Uploads/'.$name;
 ?>
 <html>
@@ -43,7 +44,7 @@
 					<th align="left" class="text">Picture Name</th><th align="center" class="text"><?php echo $fname?></th>
 				</tr>
 				<tr>
-					<th align="left" class="text">Photographer</th><th align="center" class="text"><?php echo $pname?></th>
+					<th align="left" class="text">Photographer</th><th align="center" class="text"><a class="texxt" href="otimeline.php"><?php echo $pname?></a></th>
 				</tr>
 				<tr>
 					<th align="left" class="text">Category</th><th align="center" class="text"><?php echo $cate?></th>

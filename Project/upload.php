@@ -29,8 +29,9 @@
 					<select class="drpbtn" style=" padding: 8px ;background-color:black; color: white;" name="category">
 						<option hidden selected value="">Select Category</option>
 						<option value="Abstract">Abstract</option>
+						<option value="Animal">Animal</option>
 						<option value="Light Trails">Light Trails</option>
-						<option value="=Landscape">Landscape</option>
+						<option value="Landscape">Landscape</option>
 						<option value="Mountains">Mountains</option>
 						<option value="Random">Random</option>
 					</select>
