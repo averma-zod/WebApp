@@ -37,7 +37,7 @@
 		  		<th colspan="3"><img class="profile" src="<?=$name ?>" alt="User"></th>
 		  	</tr>
 		  	<tr>
-		  		<th colspan="3"><a href="www.google.com">Change Image</a></th>
+		  		<th colspan="3"><a href="pupload.php">Change Image</a></th>
 		  	</tr>
 		  	<tr>
 		  		<th colspan="3"><font color="white"><?php echo $nam; ?></font></th>
