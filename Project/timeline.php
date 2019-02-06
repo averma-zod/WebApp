@@ -51,41 +51,40 @@
 			<th width="125px;" align="right">
 				<select name="Setting" style="padding: 10px;color:white; background-color: black"  onchange="is(this.value)">
 				<option disabled selected value="">Settings</option>
-				<option value="AccSet.php">Account Setting</option>
+				<option value="AccSet.php">Account Settings</option>
 				<option value="Login.php">Logout</option>
 			</select>
 			</th>
 		</tr>
 	</table>
 	<form method="POST" action="timelineserver.php">
-	<div align="center" class="pad">
+    <div class="back">
+      <div class="imageback">
 		<?php $db = mysqli_connect("localhost","root","","Details");
               $name=$_SESSION['name'];
               $query = "SELECT * FROM timeline where Name='$name'";   //query
               $sql = mysqli_query($db, $query);  
               $number = mysqli_num_rows($sql);
 
-	          while($row = mysqli_fetch_array($sql))
+	            while($row = mysqli_fetch_array($sql))
               {
                   $fname = $row['FileName'];
                   $pname = $row['Name'];
                   $category = $row['Category'];
-                  ?>
-                  	  <div align="center" class="imageback">
-                  <?php
-      
                   $name = $row['ServerName'];
                   $name = 'Uploads/'.$name;
                   ?>
-                      <button name="bttn" value="<?=$fname ?>" />
-                  	  <img class="img" style="width: 710px; height: 400px; margin: 10px 0px;" src="<?=$name ?>" />
+                    <element class="element">
+                      <button class="bttn" name="bttn" value="<?=$fname ?>" />
+                  	    <img class="img" src="<?=$name ?>" />
                   	  </button>
-                  	  </div>
+                    </element>
                   <?php 
               }
         ?>
-	</div>
-    </form>
+        </div>
+      </div>
+  </form>
 </body>
 </html>
 

@@ -15,6 +15,20 @@
         header('Location:ViewPhoto.php');
       }
     }
+ 
+    if(isset($_POST['searchbtn']))
+    {
+      if(empty($_POST['search']))
+      {
+        echo "Enter Photographer";
+      }
+      else
+      {
+        $_SESSION['Search'] = $_POST['search'];
+        header('Location:SearchPage.php');
+      }
+    }
+
 
     if(isset($_POST['homebtn']))
     {

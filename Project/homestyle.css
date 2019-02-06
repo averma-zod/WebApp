@@ -33,6 +33,7 @@
 .search{
 	width: 250px;
 	padding: 10px;
+	color: white;
 	background-color: black;
 	border: 2px solid grey;
 	opacity: 0.7;
@@ -46,16 +47,21 @@ body{
 	margin-top: 20px;
 	margin-bottom: 25px;
     background-color: #52A7AD;
-    width: 740px;
+    width: 540px;
     height: 100%;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .img{
 	opacity: 0.9;
+	width: 510px; 
+	height: 400px; 
+	margin: 5px 0px 0px 0px;
+	object-fit: cover;
 }
 
-.img:hover{
+.img:hover {
 	opacity: 1;
 }
 
@@ -70,6 +76,7 @@ body{
 	border-bottom: 1px solid black;
 	border-collapse: collapse;
 	margin-bottom: 10px;
+	overflow: hidden;
 }
 
 .image{

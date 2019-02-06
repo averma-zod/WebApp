@@ -26,8 +26,8 @@
 
     		<th width="90%"></th>
             
-    		<th><input class="search" type="text" name="search" placeholder="Photographer"></th>
-    		<th><button class="headerbtn">Search</button></th>
+    		<th><input id="srh" class="search" type="text" name="search" placeholder="Photographer"></th>
+    		<th><button name="searchbtn" class="headerbtn">Search</button></th>
             <th>
                 <button style="width: 120px;" name="profilebtn" class="headerbtn" >My Profile</button></form>
             </th>
@@ -68,10 +68,10 @@
                          echo $fname;
                          $name = $row['ServerName'];
                          $name = 'Uploads/'.$name;
-                       ?>
+                       ?><br>
                        <button name="bttn" value="<?=$fname ?>" />
-                          <img class="img" style="width: 710px; height: 400px; margin: 10px 0px;" src="<?=$name ?>" />
-                       </button>
+                          <img class="img" src="<?=$name ?>" />
+                       </button><br>
                        <font>Photographer:</font><?php echo $pname?><br>
                        <font>Category:</font><?php echo $category?><br>
                        </div>
