@@ -37,7 +37,7 @@
 		  		<th colspan="3"><img class="profile" src="<?=$name ?>" alt="User"></th>
 		  	</tr>
 		  	<tr>
-		  		<th colspan="3"><a href="pupload.php">Change Image</a></th>
+		  		<th colspan="3"><a class="t" href="pupload.php">Change Image</a></th>
 		  	</tr>
 		  	<tr>
 		  		<th colspan="3"><font color="white"><?php echo $nam; ?></font></th>
@@ -45,14 +45,14 @@
 		  	<tr height="20px;">
 		        
 		  	</tr>
-		  	<tr>
-		  		<th align="left"><font color="white">Name</font></th><th><input class="textbox" type="text" name="newname" placeholder="Enter New Name"></th><th><button class="btn" name="NUpdate">Update</button></th>
+		  	<tr style="height: 50px;">
+		  		<th align="left" width="120px;"><font color="white">Name</font></th><th><input class="textbox" type="text" name="newname" placeholder="Enter New Name"></th><th><button class="btn" name="NUpdate">Update</button></th>
+		  	</tr>
+		  	<tr style="height: 50px;">
+		  		<th align="left" width="120px;"><font color="white">Email</font></th><th><input class="textbox" type="text" name="newemail" placeholder="Enter New Email"></th><th><button class="btn" name="EUpdate">Update</button></th>
 		  	</tr>
 		  	<tr>
-		  		<th align="left"><font color="white">Email</font></th><th><input class="textbox" type="text" name="newemail" placeholder="Enter New Email"></th><th><button class="btn" name="EUpdate">Update</button></th>
-		  	</tr>
-		  	<tr>
-		  		<th align="left"><font color="white">Password</font></th><th><input class="textbox" type="text" name="oldpass" placeholder="Enter Old Password"></th><th></th>
+		  		<th align="left" width="120px;"><font color="white">Password</font></th><th><input class="textbox" type="text" name="oldpass" placeholder="Enter Old Password"></th><th></th>
 		  	</tr>
 		  	<tr>
 		  		<th></th><th><input class="textbox" type="text" name="newpass" placeholder="Enter New Password"></th><th></th>

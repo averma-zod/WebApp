@@ -30,7 +30,12 @@
  	}
  	else
  	{
- 	  $_SESSION['name']=$newna;
+     $sql = "SELECT * FROM Data WHERE Name='$nam'";    
+     $result = mysqli_query($db,$sql);
+     $number=$result->num_rows;
+     if($number == 0)
+     {
+ 	    $_SESSION['name']=$newna;
       $query = "UPDATE profile SET Name = '$newna' WHERE Name = '$nam';";
       $sql = mysqli_query($db, $query);
 
@@ -39,6 +44,11 @@
 
       $query = "UPDATE timeline SET Name = '$newna' WHERE Name = '$nam';";
       $sql = mysqli_query($db, $query);
+    }
+    else
+    {
+      array_push($errors,'User Already Exists');
+    }
  	}
  }
 

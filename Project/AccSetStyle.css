@@ -53,5 +53,20 @@ body
 }
 
 .textbox{
+  width: 250px;
+  padding: 10px;
+}
 
+.btn{
+ padding: 10px;
+ background-color: none;
+}
+
+.t{
+  text-decoration: none;
+  color: blue;
+}
+
+.t:hover{
+  color: white;
 }

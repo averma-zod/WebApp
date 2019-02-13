@@ -3,13 +3,18 @@
 <head>
 	<title>Search</title>
 	<style type="text/css">
+		body{
+			background-color: black;
+		}
+
 		.back{
-			background-color: red;
+			background-color: rgba(0, 4, 35,0.7);
 			margin: 20px 30%;
 			border: 1px solid blue;
 			padding: 10px;
 			width: 40%;
 			border-radius: 5px;
+			color: white;
 		}
 
 		.field{
@@ -18,6 +23,8 @@
 			padding: 10px;
 			border: none;
 			border-radius: 5px 0px 0px 5px;
+			background-color: rgb(170, 178, 238);
+			color: black;
 		}
 
 		.btn{
@@ -25,6 +32,21 @@
 			border: none;
 			padding: 10px;
 			border-radius: 0px 5px 5px 0px;
+		}
+
+		.pbtn{
+			background-color: none;
+			border: none;
+			padding: 10px;
+			border-radius: 2px;
+			margin-bottom: 5px;
+			width: 80px;
+		}
+
+		.pbtn:hover{
+			opacity: 0.9;
+			background-color: rgb(170, 178, 238);
+			transition: 0.4s;
 		}
 	</style>
 </head>
@@ -74,8 +96,8 @@
       {
     ?>
 	  <tr>
-		<th align="left" width="429px">Name</th>
-		<th>Profile</th>
+		<th align="left" width="429px"><h3>Profile</h3></th>
+		<th></th>
    	  </tr>
        <?php 
         while($row = mysqli_fetch_array($sql))
@@ -83,7 +105,7 @@
             $sname = $row['Name'];
             ?>
               <tr>
-              	<td><?php echo $sname; ?></td><td><button name="prof" value="<?=$sname?>">Profile</button></td>
+              	<td><?php echo $sname; ?></td><td><button class="pbtn" name="prof" value="<?=$sname?>">Open</button></td>
               </tr>
             <?php
         }

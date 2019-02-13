@@ -91,10 +91,10 @@
                   	<?php
                   	 echo $fname;
                   	 $name = $row['ServerName'];
-                     $name = 'Uploads/'.$name;
+                     $dname = 'Uploads/'.$name;
                   	 ?>
-                     <button name="bttn" value="<?=$fname ?>" />
-                  	   <img class="img" style="width: 710px; height: 400px; margin: 10px 0px;" src="<?=$name ?>" />
+                     <button name="bttn" value="<?=$name ?>" />
+                  	   <img class="img" style="width: 510px; height: 400px; margin: 10px 0px;" src="<?=$dname ?>" />
                   	 </button>
                   	 <font>Photographer:</font><?php echo $pname?><br>
                   	 <font>Category:</font><?php echo $category?><br>

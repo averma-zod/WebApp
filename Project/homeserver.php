@@ -8,8 +8,10 @@
     {
       $fname = $row['FileName'];
       $sname = $row['ServerName'];
+
+
       
-      if (isset($_POST['bttn']) && $_POST['bttn']==$fname) 
+      if (isset($_POST['bttn']) && $_POST['bttn']==$sname) 
       {
       	$_SESSION['naame']=$sname;
         header('Location:ViewPhoto.php');
