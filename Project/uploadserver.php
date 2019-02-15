@@ -48,7 +48,7 @@
               $Description = $_POST['disc'];
               $query = "INSERT INTO timeline(Name,FileName,ServerName,Category,Description) VALUES ('$nname','$fileName','$fileNewName','$Category','$Description')";
               $sql = mysqli_query($db,$query);
-              header("location: upload.php?Success");
+              header("location: timeline.php?Success");
            }
            else
            {

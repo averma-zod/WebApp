@@ -38,7 +38,7 @@
               move_uploaded_file($fileTmpName, $fileDestination);
               $query = "UPDATE profile SET ServerName = '$fileNewName' WHERE Name = '$nname';";
               $sql = mysqli_query($db,$query);
-              header("location: pupload.php?Success");
+              header("location: timeline.php?Success");
         }
         else
         {
